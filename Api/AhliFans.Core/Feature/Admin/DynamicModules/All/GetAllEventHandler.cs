@@ -5,6 +5,7 @@ using AhliFans.SharedKernel.APIServices.Cequens.Model;
 using AhliFans.SharedKernel.Interfaces;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure;
 using Newtonsoft.Json;
 
 namespace AhliFans.Core.Feature.Admin.Category.GetAll.Events;
@@ -187,7 +188,14 @@ public class GetAllEventHandler : IRequestHandler<DTO.GetAllDynamicModules, Acti
                 if (m.SectionType == 1)
                 {
                     LegendBirthdayDto legendBirthdayDto = new LegendBirthdayDto();
-                    legendBirthdayDto.birth_date = res.Date;
+                    if (res.Date != null)
+                    {
+                        legendBirthdayDto.birth_date = res.Date.ToString("dd/M/yyyy");
+                    }
+                    else
+                    {
+                        legendBirthdayDto.birth_date = string.Empty;
+                    }
                     legendBirthdayDto.playerName = res.LegendName;
                     legendBirthdayDto.description = res.Description;
                     legendBirthdayDto.imageThumnail = res.Media;
@@ -198,12 +206,34 @@ public class GetAllEventHandler : IRequestHandler<DTO.GetAllDynamicModules, Acti
                     ImportantMatchResultDto importantMatchDto = new ImportantMatchResultDto();
                     importantMatchDto.date = res.DateofMatch;
                     importantMatchDto.enddate = res.DateofMatch;
-                    importantMatchDto.team1.teamScore = res.AlAhly;
-                    importantMatchDto.team1.teamName = res.AlAhlyScore;
-                    importantMatchDto.team2.teamScore = res.OtherTeam;
-                    importantMatchDto.team2.teamName = res.OtherTeamScore;
+                    try
+                    {
+                        if (res.AlAhlyScore != null)
+                        {
+                            importantMatchDto.team1.teamScore = int.Parse(res.AlAhlyScore);
+                        }
+                        else
+                        {
+                            importantMatchDto.team1.teamScore = 0;
+                        }
+
+                        importantMatchDto.team1.teamName = res.AlAhly;
+                        if (res.AlAhlyScore != null)
+                        {
+                            importantMatchDto.team2.teamScore = int.Parse(res.AlAhlyScore);
+                        }
+                        else
+                        {
+                            importantMatchDto.team2.teamScore = 0;
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+
+                    }
+                    importantMatchDto.team2.teamName = res.OtherTeam ?? string.Empty;
                     importantMatchDto.matchName = null;
-                    importantMatchDto.teamName2 = res.OtherTeam;
+                    importantMatchDto.teamName2 = res.OtherTeam ?? string.Empty;
                     importantMatchDto.description = res.Description;
                     importantMatchDto.imageThumnail = res.Media;
                     events.importantMatchViewModel.data.Add(importantMatchDto);
@@ -212,7 +242,7 @@ public class GetAllEventHandler : IRequestHandler<DTO.GetAllDynamicModules, Acti
                 if (m.SectionType == 3)
                 {
                     BigTrophiesDto bigTrophiesDto = new BigTrophiesDto();
-                    bigTrophiesDto.date = res.DateofTrophy;
+                    bigTrophiesDto.date = res.DateofTrophy.ToString("dd/M/yyyy");
                     bigTrophiesDto.matchName = res.TrophyType;
                     bigTrophiesDto.description = res.Description;
                     bigTrophiesDto.imageThumnail = res.Media;
@@ -241,7 +271,7 @@ public class GetAllEventHandler : IRequestHandler<DTO.GetAllDynamicModules, Acti
                 {
                     var res = ValidateRequest.ValidateSectionOnThisDay((Sections)m.SectionType, m.Section);
                     LegentList legendBirthdayDto = new LegentList();
-                    legendBirthdayDto.birth_date = res.Date.ToString("dd/M/yyyy");
+                    legendBirthdayDto.birth_date = res.Date.ToString("dd/M/yyyy") ?? string.Empty;
                     legendBirthdayDto.playerName = res.LegendName;
                     legendBirthdayDto.description = res.Description;
                     legendBirthdayDto.imageThumnail = res.Media;
@@ -251,7 +281,7 @@ public class GetAllEventHandler : IRequestHandler<DTO.GetAllDynamicModules, Acti
                 {
                     var res = ValidateRequest.ValidateSectionOnThisDay((Sections)m.SectionType, m.Section);
                     LegentList legendBirthdayDto = new LegentList();
-                    legendBirthdayDto.birth_date = res.Date.ToString("dd/M/yyyy");
+                    legendBirthdayDto.birth_date = res.Date.ToString("dd/M/yyyy") ?? string.Empty;
                     legendBirthdayDto.playerName = res.LegendName;
                     legendBirthdayDto.description = res.Description;
                     legendBirthdayDto.imageThumnail = res.Media;
@@ -264,7 +294,7 @@ public class GetAllEventHandler : IRequestHandler<DTO.GetAllDynamicModules, Acti
                 {
                     var res = ValidateRequest.ValidateSectionCalendarManagement((Sections)m.SectionType, m.Section);
                     LegentList legendBirthdayDto = new LegentList();
-                    legendBirthdayDto.birth_date = res.BirthDate.ToString("dd/M/yyyy");
+                    legendBirthdayDto.birth_date = res.BirthDate.ToString("dd/M/yyyy") ?? string.Empty;
                     legendBirthdayDto.playerName = res.PlayerName;
                     legendBirthdayDto.description = null;
                     legendBirthdayDto.imageThumnail = res.Media;
@@ -274,8 +304,8 @@ public class GetAllEventHandler : IRequestHandler<DTO.GetAllDynamicModules, Acti
                 {
                     var res = ValidateRequest.ValidateSectionCalendarManagement((Sections)m.SectionType, m.Section);
                     EventDetailCalendarViewModel eventCalendarViewModel = new EventDetailCalendarViewModel();
-                    eventCalendarViewModel.event_startdate = res.DateFrom.ToString("dd/M/yyyy");
-                    eventCalendarViewModel.event_enddate = res.DateTo.ToString("dd/M/yyyy");
+                    eventCalendarViewModel.event_startdate = res.DateFrom.ToString("dd/M/yyyy") ?? string.Empty;
+                    eventCalendarViewModel.event_enddate = res.DateTo.ToString("dd/M/yyyy") ?? string.Empty;
                     eventCalendarViewModel.location = res.Location;
                     eventCalendarViewModel.event_time = res.EventTimeFrom + " to " + res.EventTimeTo;
                     eventCalendarViewModel.eventName = res.EventName;

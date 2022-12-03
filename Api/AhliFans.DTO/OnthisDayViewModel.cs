@@ -71,15 +71,20 @@ namespace AhliFans.DTO
     }
     public class BigTrophiesDto
     {
-        public DateTime date { get; set; }
+        public string date { get; set; }
         public string matchName { get; set; }
         public string description { get; set; }
         public string imageThumnail { get; set; }
     }
     public class ImportantMatchResultDto : ImportantMatchDto
     {
-        public DateTime date { get; set; }
-        public DateTime enddate { get; set; }
+        public ImportantMatchResultDto()
+        {
+            team1 = new TeamDto();
+            team2 = new TeamDto();
+        }
+        public string date { get; set; }
+        public string enddate { get; set; }
         public string matchName { get; set; }
         public string teamName2 { get; set; }
         public string description { get; set; }
@@ -88,7 +93,7 @@ namespace AhliFans.DTO
     }
     public class LegendBirthdayDto
     {
-        public DateTime? birth_date { get; set; }
+        public string birth_date { get; set; }
         public string playerName { get; set; }
         public string? description { get; set; }
         public string imageThumnail { get; set; }
