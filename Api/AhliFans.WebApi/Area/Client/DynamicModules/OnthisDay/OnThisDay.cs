@@ -9,7 +9,7 @@ using Swashbuckle.AspNetCore.Annotations;
 
 namespace AhliFans.WebApi.Area.Client.DynamicModules.OnthisDay
 {
-    public class OnThisDay : Controller
+    public class OnThisDay : EndpointBaseAsync.WithRequest<GetAllDynamicModules>.WithActionResult
     {
         private readonly IMediator _mediator;
 
@@ -18,7 +18,6 @@ namespace AhliFans.WebApi.Area.Client.DynamicModules.OnthisDay
             _mediator = mediator;
         }
 
-        //[Authorize]
         [HttpGet(RoutesConfig.ClientGetAllOnThisDayDynamicModules)]
         [ApiExplorerSettings(GroupName = nameof(Areas.Client))]
         [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(IReadOnlyList<GetAllDynamicModules>))]
@@ -29,7 +28,7 @@ namespace AhliFans.WebApi.Area.Client.DynamicModules.OnthisDay
           OperationId = "Admin.GetAllDynamicModules",
           Tags = new[] { "Dynamic Modules Endpoints" })
         ]
-        public async Task<ActionResult> Get([FromQuery] DTO.GetAllDynamicModules request, CancellationToken cancellationToken = default)
+        public override async Task<ActionResult> HandleAsync([FromQuery] GetAllDynamicModules request, CancellationToken cancellationToken = default)
         {
             request.Type = (int)Areas.Client;
             return await _mediator.Send(request, cancellationToken);

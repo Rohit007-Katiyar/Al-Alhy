@@ -13,10 +13,9 @@ namespace AhliFans.DTO
 
             team1 = new TeamDto();
             team2 = new TeamDto();
-            public PlayerListsDtos1()
-            {
-                playersList = new List<AllSquadListDtolist1>();
-            }
+
+            playersList = new List<AllSquadListDtolist1>();
+
         }
 
         public string title { get; set; }

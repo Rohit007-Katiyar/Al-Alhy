@@ -25,14 +25,14 @@ public class GetAllEventHandler : IRequestHandler<DTO.GetAllDynamicModules, Acti
         var filterRecords = dynamicModules.Where(m => m.ModuleType == request.ModuleType && m.SectionType == request.SectionType &&
            m.IsDeleted == request.IsDelete).OrderByDescending(m => m.UpdatedDate).ToList();
 
-        if (request.ModuleType == 1 && request.SectionType == 0)
+        if (request.ModuleType == 1 && request.Type == 1)
         {
             var filterRecords1 = dynamicModules.Where(m => m.ModuleType == request.ModuleType).ToList();
 
             var response = new OkObjectResult(OnThisDayList(request, filterRecords1, (Modules)request.ModuleType));
             return new OkObjectResult(response.Value);
         }
-        else if (request.ModuleType == 2 && request.SectionType == 0)
+        else if (request.ModuleType == 2 && request.Type == 1)
         {
             var filterRecords1 = dynamicModules.ToList();
 
@@ -241,7 +241,7 @@ public class GetAllEventHandler : IRequestHandler<DTO.GetAllDynamicModules, Acti
                 {
                     var res = ValidateRequest.ValidateSectionOnThisDay((Sections)m.SectionType, m.Section);
                     LegentList legendBirthdayDto = new LegentList();
-                    legendBirthdayDto.birth_date = res.Date;
+                    legendBirthdayDto.birth_date = res.Date.ToString("dd/M/yyyy");
                     legendBirthdayDto.playerName = res.LegendName;
                     legendBirthdayDto.description = res.Description;
                     legendBirthdayDto.imageThumnail = res.Media;
@@ -251,7 +251,7 @@ public class GetAllEventHandler : IRequestHandler<DTO.GetAllDynamicModules, Acti
                 {
                     var res = ValidateRequest.ValidateSectionOnThisDay((Sections)m.SectionType, m.Section);
                     LegentList legendBirthdayDto = new LegentList();
-                    legendBirthdayDto.birth_date = res.Date;
+                    legendBirthdayDto.birth_date = res.Date.ToString("dd/M/yyyy");
                     legendBirthdayDto.playerName = res.LegendName;
                     legendBirthdayDto.description = res.Description;
                     legendBirthdayDto.imageThumnail = res.Media;
@@ -264,7 +264,7 @@ public class GetAllEventHandler : IRequestHandler<DTO.GetAllDynamicModules, Acti
                 {
                     var res = ValidateRequest.ValidateSectionCalendarManagement((Sections)m.SectionType, m.Section);
                     LegentList legendBirthdayDto = new LegentList();
-                    legendBirthdayDto.birth_date = res.BirthDate;
+                    legendBirthdayDto.birth_date = res.BirthDate.ToString("dd/M/yyyy");
                     legendBirthdayDto.playerName = res.PlayerName;
                     legendBirthdayDto.description = null;
                     legendBirthdayDto.imageThumnail = res.Media;
@@ -274,8 +274,8 @@ public class GetAllEventHandler : IRequestHandler<DTO.GetAllDynamicModules, Acti
                 {
                     var res = ValidateRequest.ValidateSectionCalendarManagement((Sections)m.SectionType, m.Section);
                     EventDetailCalendarViewModel eventCalendarViewModel = new EventDetailCalendarViewModel();
-                    eventCalendarViewModel.event_startdate = res.DateFrom;
-                    eventCalendarViewModel.event_enddate = res.DateTo;
+                    eventCalendarViewModel.event_startdate = res.DateFrom.ToString("dd/M/yyyy");
+                    eventCalendarViewModel.event_enddate = res.DateTo.ToString("dd/M/yyyy");
                     eventCalendarViewModel.location = res.Location;
                     eventCalendarViewModel.event_time = res.EventTimeFrom + " to " + res.EventTimeTo;
                     eventCalendarViewModel.eventName = res.EventName;

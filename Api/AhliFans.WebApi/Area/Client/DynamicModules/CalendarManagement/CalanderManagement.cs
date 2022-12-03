@@ -18,7 +18,6 @@ namespace AhliFans.WebApi.Area.Client.DynamicModules.CalendarManagement
             _mediator = mediator;
         }
 
-        //[Authorize]
         [HttpGet(RoutesConfig.ClientGetAllCalanderDayDynamicModules)]
         [ApiExplorerSettings(GroupName = nameof(Areas.Client))]
         [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(IReadOnlyList<GetAllDynamicModules>))]
@@ -32,7 +31,7 @@ namespace AhliFans.WebApi.Area.Client.DynamicModules.CalendarManagement
         public override async Task<ActionResult> HandleAsync([FromQuery] GetAllDynamicModules request,
          CancellationToken cancellationToken = default)
         {
-            var decodedWord = HttpUtility.UrlDecode(request.SearchWord);
+            request.Type = (int)Areas.Client;
             return await _mediator.Send(request, cancellationToken);
         }
     }

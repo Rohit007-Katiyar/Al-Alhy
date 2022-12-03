@@ -7,8 +7,8 @@ public class RoutesConfig
     public const string ClientDynamicModules = "client/DynamicModules";
     public const string ClientGetAllDynamicModules = "client/GetAllDynamicModules";
 
-    public const string ClientGetAllOnThisDayDynamicModules = "client/GetAllOnthisDayDynamicModules";
-    public const string ClientGetAllCalanderDayDynamicModules = "client/GetAllCalanderDayDynamicModules";
+    public const string ClientGetAllOnThisDayDynamicModules = "client/GetOnThisDay";
+    public const string ClientGetAllCalanderDayDynamicModules = "client/GetCalander";
     public const string ClientGetAllLegent = "client/GetAllLegent";
     public const string ClientGetSquadList = "client/GetSquadList";
 }
