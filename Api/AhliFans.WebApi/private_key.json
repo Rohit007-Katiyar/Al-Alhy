@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "al-ahlay-fans",
+  "private_key_id": "0fca814777d8e6d9c325ac4179d3f6121f2d4f25",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDooUSlSBgDtqTZ\ncrlMRukQUNtGnhzUvgXUqMa+zeEOldeWIa/aeRgs27szcgJbeSjC5acgr7X6vAZ3\nA7uHTNdG/HylkkfrdZ0dqnhxZGDYaWe0FgOOBgWCdZUNdASD6c4KO0QzrdW1Qbha\nPitKST3z04A+YiAYtJsHa6QSh+26IPFtAPkwo6RTT+0+XZkglXxnvqV4BCU9ZIs9\ngfEMs9gh7p3gE3AQrwnF6gdpChb9vrxH2q9tm2fi7LUs46u9ivq38H2Vw/9CZdJj\nvTy6OGrz4Eo6iBPnSBGnR32DrgMeDgyL4QZL2IE2o92wr1q5mfeEklEyQNJz/FsP\nV1QR3vgZAgMBAAECggEAM6UV3dG/Dxf9yg6np5D4jfg9bhSNFwfmuHsNwG9pfvjy\nJzDsXwbSQKc5jKbLci5YR8h/TYjk0DjtAIASImwDQQ2tyH5MvC/cxSjC232q6HCi\nJr9aY63fjEJ5aEaw9+4woWHd9tEpaDeia1pw9umCuP5j8rWLJaD25/NUNg76Tn80\nbnWTtHlVWH+YBGq/dmPhaQZ4heW192qrisjFWNrTIy3shXMsu9VF5UD8WJfV0F0g\n5iMkMwFEVmSbz+d+WbF0svo3q4Q/QnCjP+ZzxaIUwO8qSd9y3wX+VZKMghikHJ+u\nhF5EpxZf+BElZUZ3wP4OSUKwTc9oLRckygHXii4PWQKBgQD1iJb+1s5fx+gtKjeC\nNM9ltq2hrNNWo9dkp89DR4gXuC33T7+qSoW7r2VjPtascIOac52vRnKQezTJC+w7\nmUyHOCPNR8YdSO3XoJFOlqVsjlGCHZQXsEJyeBU+tljA8UkOvX26A0dCwlac83Kz\nhmpUn7GeZigy50w0Ziq/9U90ZQKBgQDyi93P+yKyvKMvsW1BS99J0N8oghryj9zk\neNGik9cKRLs6UibHVMLBuPeP29Q8tEIImg8x0kXFQwQYxrCB+I8HpHOeopKnPR1n\nx++y+5MFqcjA7wIQ2H6gOKfbv3Toju+st+Dz/Ca9YuyxDNbvb/aCRqU3j6c9mP/A\n3th/4HZ3pQKBgFirCfRfuElolNTyoPcZgSg3Lz7qfauVIWzNGREv3NrL/XWJTCsA\nHIlpztBnWfkN7MizJeetJiQ9ChPshVQEiVlvkaZJXCcpNhMffjoGNxkb0B2P9vIT\nCfvyl6F9ElIjEIINNkEde/eE3OhzFiH00aNbxDXyqGOxmZh2qMuHmDjtAoGBAMOp\ny33NpZc1EBwYcP/c+jttMalXE/Ab2GHDibIyu6Y//h41Sa1CFn76/VNjTprN+/s+\ndQWHENvqjTKDjr66yn+qzc7qbY5WghNHunnT8y39YsMpzKvUSopsShW/JMu7C2R1\nThblkkbzt+e4aOftlZpQ7VWeIJdThvaLj3HRnSA1AoGBAJGBhbpHCrNTPM1QiuAN\ny9jfjOkGvpk4AXDV34jufgPqBVFIbADhrdaQJdzU7q3q+ZRXn+z9vDQizjZ9Fupc\ng3VMvX9TQV+MhIp+PWWrH8MLxG2vAnPSODKmmXeKygMAP47fY9HbTgA1xpDVmfAE\n9VTf/fQksivhGuY+ZBg3h+I1\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-riq3u@al-ahlay-fans.iam.gserviceaccount.com",
+  "client_id": "114372145212714318663",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-riq3u%40al-ahlay-fans.iam.gserviceaccount.com"
+}

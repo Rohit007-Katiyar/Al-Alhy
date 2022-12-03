@@ -1,0 +1,191 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <Sdk Name="Microsoft.Build.CentralPackageVersions" Version="2.0.46" />
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Ardalis.GuardClauses" Version="4.0.0" />
+    <PackageReference Include="Ardalis.Result" Version="3.1.2" />
+    <PackageReference Include="Ardalis.Specification" Version="6.0.1" />
+    <PackageReference Include="Autofac" Version="6.3.0" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="11.0.0" />
+    <PackageReference Include="FluentValidation" Version="11.0.1" />
+    <PackageReference Include="MediatR" Version="10.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.Identity.Core" Version="6.0.5" />
+    <PackageReference Include="Microsoft.Extensions.Identity.Stores" Version="6.0.5" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.21.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AhliFans.SharedKernel\AhliFans.SharedKernel.csproj" />
+    <ProjectReference Include="..\AhliFans.DTO\AhliFans.DTO.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Feature\Admin\BroadcastChannel\Add\Events\" />
+    <Folder Include="Feature\Admin\BroadcastChannel\GetAll\Events\" />
+    <Folder Include="Feature\Admin\BroadcastChannel\GetAll\DTO\" />
+    <Folder Include="Feature\Admin\BroadcastChannel\GetAll\Specification\" />
+    <Folder Include="Feature\Admin\BroadcastChannel\GetById\Events\" />
+    <Folder Include="Feature\Admin\BroadcastChannel\GetById\DTO\" />
+    <Folder Include="Feature\Admin\Coach\Add\Events\" />
+    <Folder Include="Feature\Admin\Coach\GetAll\Specifications\" />
+    <Folder Include="Feature\Admin\Coach\GetById\DTO\" />
+    <Folder Include="Feature\Admin\Coach\GetById\Specifications\" />
+    <Folder Include="Feature\Admin\Coach\Honor\Add\Events\" />
+    <Folder Include="Feature\Admin\Coach\Honor\Add\Mapper\" />
+    <Folder Include="Feature\Admin\Coach\Honor\GetAll\Events\" />
+    <Folder Include="Feature\Admin\Coach\Honor\GetAll\Specification\" />
+    <Folder Include="Feature\Admin\Coach\Honor\GetById\DTO\" />
+    <Folder Include="Feature\Admin\Coach\Honor\GetById\Specification\" />
+    <Folder Include="Feature\Admin\Coach\Honor\Specification\" />
+    <Folder Include="Feature\Admin\Coach\SocialMediaAccounts\Edit\Specification\" />
+    <Folder Include="Feature\Admin\Coach\Title\GetById\DTO\" />
+    <Folder Include="Feature\Admin\Jersey\NewFolder\" />
+    <Folder Include="Feature\Admin\League\Add\Events\" />
+    <Folder Include="Feature\Admin\League\GetDates\Specifications\" />
+    <Folder Include="Feature\Admin\LineUp\Add\Specifications\" />
+    <Folder Include="Feature\Admin\LineUp\Edit\Events\" />
+    <Folder Include="Feature\Admin\LineUp\Edit\Specifications\" />
+    <Folder Include="Feature\Admin\LineUp\GetAll\DTO\" />
+    <Folder Include="Feature\Admin\LineUp\GetAll\Specifications\" />
+    <Folder Include="Feature\Admin\LineUp\GetById\Events\" />
+    <Folder Include="Feature\Admin\LineUp\GetById\DTO\" />
+    <Folder Include="Feature\Admin\Location\Cities\DTO\" />
+    <Folder Include="Feature\Admin\Location\Cities\Events\" />
+    <Folder Include="Feature\Admin\Location\Cities\Specifications\" />
+    <Folder Include="Feature\Admin\Location\Countries\DTO\" />
+    <Folder Include="Feature\Admin\Location\Countries\Specifications\" />
+    <Folder Include="Feature\Admin\ManageUsers\Fan\GetById\Events\" />
+    <Folder Include="Feature\Admin\ManageUsers\Fan\GetById\Specifications\" />
+    <Folder Include="Feature\Admin\ManageUsers\SubAdmin\GetById\Specifications\" />
+    <Folder Include="Feature\Admin\MatchCenter\Substitution\Create\Specifications\" />
+    <Folder Include="Feature\Admin\MatchCenter\Substitution\GetByMatchId\Events\" />
+    <Folder Include="Feature\Admin\MatchCenter\Substitution\GetByMatchId\DTO\" />
+    <Folder Include="Feature\Admin\Match\Add\Events\" />
+    <Folder Include="Feature\Admin\Match\Add\Mapper\" />
+    <Folder Include="Feature\Admin\Match\Edit\Events\" />
+    <Folder Include="Feature\Admin\Match\GetAll\DTO\" />
+    <Folder Include="Feature\Admin\Match\GetById\DTO\" />
+    <Folder Include="Feature\Admin\Match\GetById\Specifications\" />
+    <Folder Include="Feature\Admin\Match\Media\Images\GetAll\Specifications\" />
+    <Folder Include="Feature\Admin\Match\Media\Images\GetById\Events\" />
+    <Folder Include="Feature\Admin\Moment\Edit\Events\" />
+    <Folder Include="Feature\Admin\Moment\GetAll\Events\" />
+    <Folder Include="Feature\Admin\Moment\GetAll\DTO\" />
+    <Folder Include="Feature\Admin\Moment\GetAll\Specification\" />
+    <Folder Include="Feature\Admin\Moment\GetById\Events\" />
+    <Folder Include="Feature\Admin\Moment\GetById\Specification\" />
+    <Folder Include="Feature\Admin\Notification\Manual\Get\Events\" />
+    <Folder Include="Feature\Admin\Notification\Manual\Get\DTO\" />
+    <Folder Include="Feature\Admin\Notification\Manual\Get\Specifications\" />
+    <Folder Include="Feature\Admin\Notification\Manual\Send\Events\" />
+    <Folder Include="Feature\Admin\Notification\Manual\Send\Mapper\" />
+    <Folder Include="Feature\Admin\Notification\Manual\Send\Specification\" />
+    <Folder Include="Feature\Admin\Player\Add\Specification\" />
+    <Folder Include="Feature\Admin\Player\ChangeStatus\Events\" />
+    <Folder Include="Feature\Admin\Player\GetAll\Specifications\" />
+    <Folder Include="Feature\Admin\Player\Image\Update\Events\" />
+    <Folder Include="Feature\Admin\Player\Position\GetAll\Specifications\" />
+    <Folder Include="Feature\Admin\Player\Position\GetById\Events\" />
+    <Folder Include="Feature\Admin\Player\Position\GetById\DTO\" />
+    <Folder Include="Feature\Admin\Player\Position\GetGeneralPosition\DTO\" />
+    <Folder Include="Feature\Admin\Player\SocialMediaAccounts\Add\Events\" />
+    <Folder Include="Feature\Admin\Player\SocialMediaAccounts\ChangeStatus\Events\" />
+    <Folder Include="Feature\Admin\Player\SocialMediaAccounts\Edit\Events\" />
+    <Folder Include="Feature\Admin\Player\SocialMediaAccounts\Edit\Specification\" />
+    <Folder Include="Feature\Admin\Player\SocialMediaAccounts\GetAll\Specification\" />
+    <Folder Include="Feature\Admin\Referee\Add\Events\" />
+    <Folder Include="Feature\Admin\Referee\Add\Mapper\" />
+    <Folder Include="Feature\Admin\Referee\GetAll\Events\" />
+    <Folder Include="Feature\Admin\Referee\GetAll\DTO\" />
+    <Folder Include="Feature\Admin\Referee\GetById\Specifications\" />
+    <Folder Include="Feature\Admin\Region\Add\Events\" />
+    <Folder Include="Feature\Admin\Region\Add\Mapper\" />
+    <Folder Include="Feature\Admin\Region\Edit\Events\" />
+    <Folder Include="Feature\Admin\Region\GetAll\Events\" />
+    <Folder Include="Feature\Admin\Region\GetAll\DTO\" />
+    <Folder Include="Feature\Admin\Region\GetAll\Specifications\" />
+    <Folder Include="Feature\Admin\Region\GetById\Events\" />
+    <Folder Include="Feature\Admin\Region\GetById\DTO\" />
+    <Folder Include="Feature\Admin\Season\Add\Events\" />
+    <Folder Include="Feature\Admin\Season\Add\Mapper\" />
+    <Folder Include="Feature\Admin\Season\Add\Specifications\" />
+    <Folder Include="Feature\Admin\Season\Edit\Events\" />
+    <Folder Include="Feature\Admin\Season\GetAll\DTO\" />
+    <Folder Include="Feature\Admin\Season\GetById\DTO\" />
+    <Folder Include="Feature\Admin\SquadList\Add\Events\" />
+    <Folder Include="Feature\Admin\Stadium\Add\Events\" />
+    <Folder Include="Feature\Admin\Stadium\Add\Mapper\" />
+    <Folder Include="Feature\Admin\Stadium\GetAll\DTO\" />
+    <Folder Include="Feature\Admin\Stadium\GetAll\Specifications\" />
+    <Folder Include="Feature\Admin\Stadium\GetById\DTO\" />
+    <Folder Include="Feature\Admin\Team\Add\Events\" />
+    <Folder Include="Feature\Admin\Team\Add\Mapper\" />
+    <Folder Include="Feature\Admin\Team\GetAll\Events\" />
+    <Folder Include="Feature\Admin\Team\GetAll\Specifications\" />
+    <Folder Include="Feature\Admin\Team\TeamType\Add\Events\" />
+    <Folder Include="Feature\Admin\Team\TeamType\Edit\Event\" />
+    <Folder Include="Feature\Admin\Team\TeamType\GetAll\Events\" />
+    <Folder Include="Feature\Admin\Team\TeamType\GetAll\Specifications\" />
+    <Folder Include="Feature\Admin\Team\TeamType\GetById\DTO\" />
+    <Folder Include="Feature\Admin\Trophy\Add\Events\" />
+    <Folder Include="Feature\Admin\Trophy\Add\Mapper\" />
+    <Folder Include="Feature\Admin\Trophy\GetAll\Events\" />
+    <Folder Include="Feature\Admin\Trophy\GetAll\DTO\" />
+    <Folder Include="Feature\Admin\Trophy\GetAll\Specifications\" />
+    <Folder Include="Feature\Admin\Trophy\GetById\DTO\" />
+    <Folder Include="Feature\Admin\Trophy\TrophyType\Add\Events\" />
+    <Folder Include="Feature\Admin\Trophy\TrophyType\Edit\Events\" />
+    <Folder Include="Feature\Admin\Trophy\TrophyType\GetAll\Specifications\" />
+    <Folder Include="Feature\Fan\Dsquared\MembershipSubscriptions\GetSubscriptions\Dto\" />
+    <Folder Include="Feature\Fan\Dsquared\MembershipSubscriptions\GetSubscriptions\Events\" />
+    <Folder Include="Feature\Fan\Dsquared\MembershipSubscriptions\Subscribe\Events\" />
+    <Folder Include="Feature\Fan\Dsquared\MembershipSubscriptions\Subscribe\Specifications\" />
+    <Folder Include="Feature\Fan\Dsquared\MembershipSubscriptions\Subscribe\Validation\" />
+    <Folder Include="Feature\Fan\League\Get\Events\" />
+    <Folder Include="Feature\Fan\League\Get\DTO\" />
+    <Folder Include="Feature\Fan\League\Get\Specifications\" />
+    <Folder Include="Feature\Fan\MatchCenter\Coach\GetAll\DTO\" />
+    <Folder Include="Feature\Fan\MatchCenter\Coach\GetAll\Specification\" />
+    <Folder Include="Feature\Fan\Notification\Manual\GetById\Events\" />
+    <Folder Include="Feature\Fan\Notification\Manual\GetById\Specifications\" />
+    <Folder Include="Feature\Fan\Notification\Manual\GetCount\Events\" />
+    <Folder Include="Feature\Fan\Notification\Setting\Add\Events\" />
+    <Folder Include="Feature\Fan\Notification\Setting\Add\Mapper\" />
+    <Folder Include="Feature\Fan\Notification\Setting\Edit\Events\" />
+    <Folder Include="Feature\Fan\Notification\Setting\Get\DTO\" />
+    <Folder Include="Feature\Fan\Player\GetByPosition\Events\" />
+    <Folder Include="Feature\Fan\Player\GetByPosition\Specifications\" />
+    <Folder Include="Feature\Fan\Preferences\Add\Events\" />
+    <Folder Include="Feature\Fan\Preferences\Add\Mapper\" />
+    <Folder Include="Feature\Fan\Preferences\Edit\Events\" />
+    <Folder Include="Feature\Fan\Preferences\Get\Events\" />
+    <Folder Include="Feature\Fan\Preferences\Get\DTO\" />
+    <Folder Include="Feature\Fan\Preferences\Get\Specifications\" />
+    <Folder Include="Feature\Fan\Profile\GetById\Specifications\" />
+    <Folder Include="Feature\Fan\Referee\GetByMatch\Events\" />
+    <Folder Include="Feature\Fan\Referee\GetByMatch\DTO\" />
+    <Folder Include="Feature\Fan\VotePanel\Moment\GetAll\Events\" />
+    <Folder Include="Feature\Fan\VotePanel\Moment\GetAll\DTO\" />
+    <Folder Include="Feature\Fan\VotePanel\Moment\GetAll\Specifications\" />
+    <Folder Include="Feature\Fan\VotePanel\Moment\Vote\Events\" />
+    <Folder Include="Feature\Fan\VotePanel\Player\GetAll\Events\" />
+    <Folder Include="Feature\Fan\VotePanel\Player\GetAll\Specification\" />
+    <Folder Include="Feature\Fan\VotePanel\Player\GetVote\Events\" />
+    <Folder Include="Feature\Fan\VotePanel\Player\GetVote\Dto\" />
+    <Folder Include="Feature\Fan\VotePanel\Player\GetVote\Specifications\" />
+    <Folder Include="Feature\Localization\" />
+    <Folder Include="Feature\Security\ForgotPassword\Specifications\" />
+    <Folder Include="Feature\Security\LinkSocialMedia\Fan\Gmail\" />
+    <Folder Include="Feature\Security\ResendOtp\Fan\Events\" />
+    <Folder Include="Feature\Security\ValidateOtp\Admin\Events\" />
+  </ItemGroup>
+
+</Project>
